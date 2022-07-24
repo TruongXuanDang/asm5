@@ -1,0 +1,120 @@
+@CHARSET "UTF-8";
+
+body {
+	background-image: url("http://localhost:8080/images/img04.jpg")
+}
+
+.my-blogs {
+	padding: 20px;
+}
+
+.header {
+	height: 150px;
+}
+
+.header .title {
+	font-size: 50px;
+	padding-bottom: 50px
+}
+
+.header .menu {
+	display: flex;
+	color: white;
+	background-color: black;
+	height: 50px;
+}
+
+.header .menu .menu-item {
+	width: 100px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .menu .menu-item a {
+	color: white;
+	text-decoration: none
+}
+
+.content {
+	display: flex;
+	padding-top: 50px;
+	justify-content: space-between
+}
+
+.content .content-item {
+	padding-left: 20px;
+	width: 90%
+}
+
+.content .article .image {
+	padding-right: 20px;
+}
+
+.content .general-info {
+	padding: 20px 0px
+}
+
+.content .content-right {
+	width: 150px
+}
+
+.content .content-left .article {
+	
+}
+
+.content .content-left .article .image{
+	float: left
+}
+
+.content .content-left .article .artical-content {
+	text-align: justify
+}
+
+
+.content .content-left .title {
+	font-size: 30px
+} 
+
+.content .content-right .title {
+	font-size: 20px
+}
+
+.content .form-border {
+	border: 1px dashed;
+}
+
+.footer .item {
+	display: flex
+}
+
+.footer .item .task {
+	font-weight: bold
+}
+
+button {
+	background-color: red;
+	color: white;
+	border: none
+}
+
+.content .form-border {
+	width: 500px
+}
+
+form table {
+	width: 90%
+}
+
+form table input {
+	width: 100%
+}
+
+form button {
+	float: right
+}
+
+form .name {
+	text-align: right;
+	font-weight: bold;
+}

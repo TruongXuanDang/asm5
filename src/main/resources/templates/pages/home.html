@@ -2,10 +2,69 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
+<link th:rel="stylesheet" th:href="@{/webjars/bootstrap/5.1.3/css/bootstrap.min.css} " type="text/css"/>
+<link th:rel="stylesheet" th:href="@{/webjars/font-awesome/6.1.1/css/all.css} " type="text/css"/>
+<link th:href="@{/css/style.css}" rel="stylesheet" type="text/css">
 <title>Home</title>
 </head>
 <body>
-
-
+	<div class="my-blogs">
+		<div class="header">
+			<div class="title">My blogs</div>
+			<ul class="menu nav">
+				<li class="menu-item active"><a href="home">Home</a></li>
+				<li class="menu-item"><a href="contact">Contact</a></li>
+			</ul>
+		</div>
+		<div class="content">
+			<div class="content-left content-item">
+				<div class="general-info">
+					<div class="breadcrumb">Category Art</div>
+					<div class="title">Why Blog?</div>
+					<div class="date">Posted on</div>
+				</div>
+				<div class="article">
+					<div class="image">
+						<img th:src="@{/images/img03.jpg}"/>
+					</div>
+					<div class="artical-content">
+						<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris massa mauris, sagittis eu accumsan eu, pulvinar at ipsum. Duis dapibus lorem at velit tristique, sit amet commodo nisl vehicula. Curabitur accumsan auctor nisl vitae imperdiet. Aliquam lobortis faucibus neque vitae blandit. Cras viverra libero nunc, et convallis mauris rutrum eu. Donec tellus massa, gravida eu consectetur ut, vulputate sit amet velit. Quisque pharetra mi eu dolor interdum, non dapibus sem pulvinar. Proin eget tellus nunc.</div>
+						<div>Vestibulum hendrerit tellus tellus, at tincidunt nisi imperdiet eget. Proin arcu ante, ornare sit amet dolor et, scelerisque commodo magna. Pellentesque laoreet nisi vel purus pellentesque, non mollis ex viverra. In hac habitasse platea dictumst. Integer ac convallis eros. Praesent scelerisque lorem id mollis congue. Nullam ullamcorper mattis commodo.</div>
+						<div>Phasellus consectetur sem justo, a rhoncus ipsum fringilla eu. Nunc in vulputate neque. Sed sodales est auctor ultricies aliquam. Vestibulum vulputate purus nec mi gravida, in consequat metus euismod. Nam blandit, nibh non cursus dignissim, diam mi tempor turpis, hendrerit sollicitudin massa lectus a leo. Etiam a magna et mauris sodales luctus aliquam in lectus. Morbi porta enim mi, condimentum varius leo bibendum eu. Vivamus blandit quis ex et cursus. Nullam luctus interdum convallis.</div>
+						<div>Fusce quis sem quis velit aliquet consequat a vitae mi. Suspendisse non tincidunt augue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam ut eleifend sapien. Sed rhoncus rutrum arcu at cursus. Aenean semper tempor nisi in porttitor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus placerat accumsan urna, et ultricies lectus. In est metus, ornare non elit a, iaculis interdum urna. Duis vitae sem ut tortor mattis porttitor. Vivamus non sapien orci. Integer porttitor tempor ultricies.</div>
+						<div>Vestibulum dapibus dictum diam ac vestibulum. Proin pellentesque id dolor sed facilisis. Suspendisse laoreet pulvinar tellus in tempor. Etiam commodo est id risus gravida, sit amet commodo sapien euismod. Donec et facilisis eros. Praesent ac metus lorem. Suspendisse ornare felis ante, nec ullamcorper neque dictum quis. Aenean mattis nulla a velit pharetra commodo non sed lorem. In ut rutrum sem. Nullam molestie vehicula lacus in sollicitudin. Phasellus id sagittis tellus. Vivamus pulvinar, neque ac pretium mollis, eros arcu hendrerit diam, non malesuada velit libero nec nisl. Mauris commodo lectus lectus, a blandit mauris condimentum sit amet.</div>
+					</div>
+				</div>
+			</div>
+			<div class="content-right content-item">
+				<div class="title">Categories</div>
+				<hr/>
+				<div class="items">
+					<div class="item">Art</div>
+					<div class="item">Beauty</div>
+					<div class="item">Food</div>
+					<div class="item">Car</div>
+				</div>
+			</div>
+		</div>
+		<hr/>
+		<div class="footer">
+			<div class="item">
+				<div class="task">Dave Pearson on Pinterest</div>
+				&nbsp;
+				<div class="date">Posted on November</div>
+			</div>
+			<div class="item">
+				<div class="task">Dave Pearson on Pinterest</div>
+				&nbsp;
+				<div class="date">Posted on November</div>
+			</div>
+			<div class="item">
+				<div class="task">Dave Pearson on Pinterest</div>
+				&nbsp;
+				<div class="date">Posted on November</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
