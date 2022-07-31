@@ -53,11 +53,7 @@
 				<div class="title">Categories</div>
 				<hr/>
 				<div class="items">
-					<div class="item" th:each="category:${listCategories}">[(${category.name})]</div>
-					<div class="item">Art</div>
-					<div class="item">Beauty</div>
-					<div class="item">Food</div>
-					<div class="item">Car</div>
+					<a class="item" th:each="category:${listCategories}" th:href="@{'/' + ${category.id}}">[(${category.name})]<br/></a>
 				</div>
 			</div>
 		</div>

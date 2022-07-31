@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -24,7 +25,7 @@ public class BlogController {
 	public String viewHomePage(Model model) {
 		List<Categories> listCategories = cService.listAll();
 		List<Blogs> listBlogs = bService.listAll().subList(0, 3);
-		List<Blogs> searchedListBlogs = listCategories.get(0).getBlogs();
+		List<Blogs> searchedListBlogs = cService.get(listCategories.get(0).getId()).getBlogs();
 		
 		model.addAttribute("listCategories", listCategories);
 		model.addAttribute("listBlogs", listBlogs);
@@ -33,11 +34,11 @@ public class BlogController {
 		return "pages/home";
 	}
 	
-	@RequestMapping(value="/getBlogs", method= RequestMethod.POST)
-	public String saveProduct(Model model, int category_id) {
+	@RequestMapping(value="/{id}")
+	public String saveProduct(Model model, @PathVariable(name="id") long category_id) {
 		List<Categories> listCategories = cService.listAll();
 		List<Blogs> listBlogs = bService.listAll().subList(0, 3);
-		List<Blogs> searchedListBlogs = listCategories.get(category_id).getBlogs();
+		List<Blogs> searchedListBlogs = cService.get(category_id).getBlogs();
 		
 		model.addAttribute("listCategories", listCategories);
 		model.addAttribute("listBlogs", listBlogs);
