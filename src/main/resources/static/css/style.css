@@ -39,7 +39,7 @@ body {
 .content {
 	display: flex;
 	padding-top: 50px;
-	justify-content: space-between
+	justify-content: space-between;
 }
 
 .content .content-item {
@@ -57,10 +57,6 @@ body {
 
 .content .content-right {
 	width: 150px
-}
-
-.content .content-left .article {
-	
 }
 
 .content .content-left .article .image{

@@ -16,12 +16,12 @@ public class AppController {
 	@Autowired
 	private ProductService service;
 	
-	@RequestMapping("/")
-	public String viewHomePage(Model model) {
-		List<Product> listProducts = service.listAll();
-		model.addAttribute("listProducts", listProducts);
-		return "index";
-	}
+//	@RequestMapping("/")
+//	public String viewHomePage(Model model) {
+//		List<Product> listProducts = service.listAll();
+//		model.addAttribute("listProducts", listProducts);
+//		return "index";
+//	}
 	
 	@RequestMapping("/new")
 	public String showNewProductForm(Model model) {

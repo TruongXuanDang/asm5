@@ -53,29 +53,12 @@
 				<div class="title">Categories</div>
 				<hr/>
 				<div class="items">
+					<div class="item" th:each="category:${listCategories}">[(${category.name})]</div>
 					<div class="item">Art</div>
 					<div class="item">Beauty</div>
 					<div class="item">Food</div>
 					<div class="item">Car</div>
 				</div>
-			</div>
-		</div>
-		<hr/>
-		<div class="footer">
-			<div class="item">
-				<div class="task">Dave Pearson on Pinterest</div>
-				&nbsp;
-				<div class="date">Posted on November</div>
-			</div>
-			<div class="item">
-				<div class="task">Dave Pearson on Pinterest</div>
-				&nbsp;
-				<div class="date">Posted on November</div>
-			</div>
-			<div class="item">
-				<div class="task">Dave Pearson on Pinterest</div>
-				&nbsp;
-				<div class="date">Posted on November</div>
 			</div>
 		</div>
 	</div>
