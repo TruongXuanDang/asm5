@@ -25,18 +25,20 @@ public class ContactController {
 	private CategoryService cService;
 	
 	@RequestMapping("/contact")
-	public String viewPartyAddressPage(Model model) {
+	public String viewContactPage(Model model) {
 		List<Categories> listCategories = cService.listAll();
+		Contacts contact = new Contacts();
+		model.addAttribute("contact", contact);
 		model.addAttribute("listCategories", listCategories);
 		return "pages/contact";
 	}
 	
 	@RequestMapping(value="/saveContact", method= RequestMethod.POST)
-	public String saveContact(@Valid Contacts message, BindingResult result, Model model) {
+	public String saveContact(@Valid Contacts contact, BindingResult result, Model model) {
 		if (result.hasErrors()) {
-		    return "pages/contact";
+		    return "redirect:/contact";
 		}
-		service.save(message);
+		service.save(contact);
 		return "redirect:/contact";
 	}
 }

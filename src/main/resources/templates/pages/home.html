@@ -19,10 +19,11 @@
 		<div class="content">
 			<div class="content-left">
 				<div class="content-item" th:each="blog:${searchedListBlogs}">
-					<div class="breadcrumb">[(${blog.category.name})]</div>
+					<div class="breadcrumb"><span class="category-name">[(${blog.category.name})]</span>&nbsp<span> - Full Category</span></div>
+					
 					<div class="general-info">
-						<div class="title">[(${blog.name})]</div>
-						<div class="date">Posted on <span>[(${blog.created_date})]</span></div>
+						<div class="title"><span>[(${blog.name})]</span></div>
+						<div class="date">Posted on <span>[(${blog.created_date})]</span>&nbsp<span class="full-article"> - Full Article</span></div>
 					</div>
 					<div class="article">
 						<div class="image">
@@ -39,27 +40,16 @@
 				<div class="title">Categories</div>
 				<hr/>
 				<div class="items">
-					<a class="item" th:each="category:${listCategories}" th:href="@{'/' + ${category.id}}">[(${category.name})]<br/></a>
-					
+					<a class="item" th:each="category:${listCategories}" th:href="@{'/' + ${category.id}}"><span>></span>&#160<span>[(${category.name})]</span><br/></a>
 				</div>
 			</div>
 		</div>
 		<hr/>
 		<div class="footer">
-			<div class="item">
-				<div class="task">Dave Pearson on Pinterest</div>
-				&nbsp;
-				<div class="date">Posted on November</div>
-			</div>
-			<div class="item">
-				<div class="task">Dave Pearson on Pinterest</div>
-				&nbsp;
-				<div class="date">Posted on November</div>
-			</div>
-			<div class="item">
-				<div class="task">Dave Pearson on Pinterest</div>
-				&nbsp;
-				<div class="date">Posted on November</div>
+			<div class="item" th:each="blog:${listBlogs}">
+				<div class="task"><span>></span>&#160<span>[(${blog.name})]</span></div>
+				&nbsp;&nbsp;
+				<div class="date"><span>Posted on</span>&#160<span>[(${blog.created_date})]</span></div>
 			</div>
 		</div>
 	</div>

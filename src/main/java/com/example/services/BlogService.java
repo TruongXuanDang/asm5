@@ -17,4 +17,8 @@ public class BlogService {
 	public List<Blogs> listAll() {
 		return repo.findAll();
 	}
+	
+	public List<Blogs> latestItems() {
+		return repo.latestItems();
+	}
 }

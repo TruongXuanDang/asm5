@@ -20,27 +20,42 @@
 			<div class="content-left content-item">
 				<div class="form-border">
 					<button>All fields are required</button>
-					<form action="#" method="post">
+					<form action="#" method="post" th:action="@{/saveContact}" th:object="${contact}">
 						<table border="0" cellpadding="10">
-							<tr>
+							<tr class="form-group">
 								<td class="name">Name:</td>
-								<td><input type="text"/></td>
+								<td>
+									<input class="form-control" type="text" th:field="*{name}"/>
+									<div class="alert alert-warning" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
+								</td>
 							</tr>
-							<tr>
+							<tr class="form-group">
 								<td class="name">Email:</td>
-								<td><input type="text"/></td>
+								<td>
+									<input class="form-control" type="text" th:field="*{email}"/>
+									<div class="alert alert-warning" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+								</td>
 							</tr>
-							<tr>
+							<tr class="form-group">
 								<td class="name">Phone:</td>
-								<td><input type="text"/></td>
+								<td>
+									<input class="form-control" type="text" th:field="*{phone}"/>
+									<div class="alert alert-warning" th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></div>
+								</td>
 							</tr>
-							<tr>
+							<tr class="form-group">
 								<td class="name">Company:</td>
-								<td><input type="text"/></td>
+								<td>
+									<input class="form-control" type="text" th:field="*{company}"/>
+									<div class="alert alert-warning" th:if="${#fields.hasErrors('company')}" th:errors="*{company}"></div>
+								</td>
 							</tr>
-							<tr>
+							<tr class="form-group">
 								<td class="name">Message:</td>
-								<td><input type="text"/></td>
+								<td>
+									<textarea class="form-control" type="text" th:field="*{message}"></textarea>
+									<div class="alert alert-warning" th:if="${#fields.hasErrors('message')}" th:errors="*{message}"></div>
+								</td>
 							</tr>
 							<tr>
 								<td colspan="2"><button type="submit">Save</button></td>
@@ -53,7 +68,7 @@
 				<div class="title">Categories</div>
 				<hr/>
 				<div class="items">
-					<a class="item" th:each="category:${listCategories}" th:href="@{'/' + ${category.id}}">[(${category.name})]<br/></a>
+					<a class="item" th:each="category:${listCategories}" th:href="@{'/' + ${category.id}}"><span>></span>&#160<span>[(${category.name})]</span><br/></a>
 				</div>
 			</div>
 		</div>

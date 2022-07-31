@@ -24,7 +24,7 @@ public class BlogController {
 	@RequestMapping(value={"", "/", "/home"})
 	public String viewHomePage(Model model) {
 		List<Categories> listCategories = cService.listAll();
-		List<Blogs> listBlogs = bService.listAll().subList(0, 3);
+		List<Blogs> listBlogs = bService.latestItems().subList(0, 3);
 		List<Blogs> searchedListBlogs = cService.get(listCategories.get(0).getId()).getBlogs();
 		
 		model.addAttribute("listCategories", listCategories);
@@ -37,7 +37,7 @@ public class BlogController {
 	@RequestMapping(value="/{id}")
 	public String saveProduct(Model model, @PathVariable(name="id") long category_id) {
 		List<Categories> listCategories = cService.listAll();
-		List<Blogs> listBlogs = bService.listAll().subList(0, 3);
+		List<Blogs> listBlogs = bService.latestItems().subList(0, 3);
 		List<Blogs> searchedListBlogs = cService.get(category_id).getBlogs();
 		
 		model.addAttribute("listCategories", listCategories);

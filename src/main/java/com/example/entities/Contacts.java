@@ -4,14 +4,20 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotEmpty;
 
 @Entity
 public class Contacts {
 	private long id;
+	@NotEmpty(message = "Name cannot be empty.")
 	private String name; 
+	@NotEmpty(message = "Email cannot be empty.")
 	private String email;
+	@NotEmpty(message = "Phone cannot be empty.")
 	private String phone;
+	@NotEmpty(message = "Company cannot be empty.")
 	private String company;
+	@NotEmpty(message = "Message cannot be empty.")
 	private String message;
 	
 	public Contacts() {}
